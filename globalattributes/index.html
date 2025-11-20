@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>HTML Global Attributes Examples</title>
+        <style>
+          body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+              "Helvetica Neue", Arial;
+            background: #f7f7f7;
+            color: #111;
+            padding: 32px;
+          }
+          .card {
+            background: #fff;
+            border: 1px solid #e4e4e4;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 12px 0;
+          }
+          pre {
+            background: #0b1220;
+            color: #cbd5e1;
+            padding: 12px;
+            border-radius: 6px;
+            overflow: auto;
+          }
+          label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>Examples of HTML global attributes</h1>
+        <p>
+          Each element below demonstrates a set of
+          <strong>global attributes</strong> applied. Use this file as a
+          reference or copy snippets into your projects.
+        </p>
+
+        <section
+          class="card"
+          id="text-sample"
+          title="Text container with many globals"
+          lang="en-US"
+          data-category="example"
+          aria-label="Text example"
+          role="region"
+          tabindex="0"
+        >
+          <label for="p1"
+            >Paragraph (contenteditable, draggable, data-*, class, id, title,
+            tabindex, hidden, spellcheck, translate)</label
+          >
+          <p
+            id="p1"
+            class="demo paragraph"
+            title="Editable paragraph"
+            data-source="generated"
+            contenteditable="true"
+            draggable="true"
+            spellcheck="true"
+            translate="no"
+            tabindex="0"
+            aria-live="polite"
+          >
+            This paragraph demonstrates many global attributes:
+            <code>class</code>, <code>id</code>, <code>title</code>,
+            <code>data-*</code>, <code>contenteditable</code>,
+            <code>draggable</code>, <code>spellcheck</code>,
+            <code>tabindex</code>, and <code>aria-live</code>. Try to edit me!
+          </p>
+        </section>
+
+        <section
+          class="card"
+          id="form-sample"
+          role="form"
+          aria-labelledby="form-title"
+          data-formtype="soldier"
+        >
+          <h2 id="form-title">Form controls with global attributes</h2>
+
+          <form id="exampleForm" autocomplete="on">
+            <div>
+              <label for="name"
+                >Name (accesskey, autofocus, autocapitalize)</label
+              >
+              <input
+                id="name"
+                name="name"
+                type="text"
+                accesskey="n"
+                autofocus
+                autocapitalize="words"
+                class="input name"
+                inputmode="text"
+                placeholder="First Last"
+                title="Soldier's full name"
+                data-field="fullname"
+                aria-required="true"
+              />
+            </div>
+
+            <div>
+              <label for="email">Email (tabindex, required)</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                tabindex="1"
+                required
+                class="input email"
+                title="contact email"
+                aria-describedby="email-help"
+              />
+              <small id="email-help">Use a valid email address.</small>
+            </div>
+
+            <div>
+              <label for="bio">Biography (rows, spellcheck)</label>
+              <textarea
+                id="bio"
+                name="bio"
+                rows="4"
+                spellcheck="true"
+                class="input bio"
+                data-maxlen="500"
+                aria-label="Short biography"
+                placeholder="Short bio..."
+              ></textarea>
+            </div>
+
+            <div>
+              <label>Hidden input (hidden attribute)</label>
+              <input type="hidden" id="token" name="token" value="abc123" />
+            </div>
+
+            <div>
+              <label for="file">File upload (accept, multiple)</label>
+              <input
+                id="file"
+                name="documents"
+                type="file"
+                accept="image/*,.pdf"
+                multiple
+                class="input file"
+                data-purpose="id-upload"
+                title="Upload files"
+              />
+            </div>
+
+            <div>
+              <label for="range">Range (inputmode)</label>
+              <input
+                id="range"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                inputmode="numeric"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              />
+            </div>
+
+            <div>
+              <label>Checkbox (role, aria-checked)</label>
+              <input
+                id="chk1"
+                type="checkbox"
+                name="ready"
+                role="checkbox"
+                aria-checked="false"
+                class="input chk"
+              />
+              <label for="chk1">Ready</label>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                class="btn primary"
+                title="Submit form"
+                data-action="submit"
+              >
+                Submit
+              </button>
+              <button
+                type="reset"
+                class="btn"
+                title="Reset form"
+                data-action="reset"
+              >
+                Reset
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section
+          class="card"
+          id="media-sample"
+          role="region"
+          aria-label="media examples"
+          data-media="true"
+        >
+          <h2>Media elements</h2>
+
+          <label for="img1"
+            >Image (alt, draggable, decoding, fetchpriority)</label
+          >
+          <img
+            id="img1"
+            src="https://via.placeholder.com/320x120"
+            alt="Placeholder image"
+            draggable="false"
+            decoding="async"
+            fetchpriority="low"
+            class="media-img"
+            data-license="public"
+          />
+
+          <label for="video1">Video (controls, muted, loop)</label>
+          <video
+            id="video1"
+            width="320"
+            height="180"
+            controls
+            muted
+            loop
+            title="Demo video"
+            class="media-video"
+            data-source="demo"
+          >
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </section>
+
+        <section
+          class="card"
+          id="interactive"
+          role="application"
+          aria-label="interactive demo"
+          data-demo="true"
+        >
+          <h2>Interactive & Semantic elements</h2>
+
+          <details
+            id="details1"
+            open
+            class="demo-details"
+            data-toggle="true"
+            tabindex="0"
+          >
+            <summary id="summary1" title="Toggle details">
+              Details summary (open/close)
+            </summary>
+            <p contenteditable="true" spellcheck="true" aria-live="polite">
+              Editable content inside &lt;details&gt;.
+            </p>
+          </details>
+
+          <dialog
+            id="dlg"
+            open
+            class="demo-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="dlg-title"
+            data-state="open"
+          >
+            <h3 id="dlg-title">Sample dialog</h3>
+            <p>
+              This is a native &lt;dialog&gt; with several global attributes on
+              surrounding elements.
+            </p>
+            <menu>
+              <button formmethod="dialog">Close</button>
+            </menu>
+          </dialog>
+
+          <meter
+            id="meter1"
+            min="0"
+            max="100"
+            value="70"
+            low="30"
+            high="80"
+            optimum="90"
+            title="Health meter"
+            data-metric="stamina"
+          >
+            70%
+          </meter>
+
+          <progress id="progress1" value="0.6" max="1" title="Upload progress">
+            60%
+          </progress>
+
+          <div
+            id="svg-wrap"
+            class="svg"
+            role="img"
+            aria-label="Decorative icon"
+          >
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <circle cx="12" cy="12" r="10" fill="#e4e4e4" />
+            </svg>
+          </div>
+        </section>
+
+        <section
+          class="card"
+          id="aria-sample"
+          role="region"
+          aria-label="Accessibility sample"
+        >
+          <h2>ARIA & Internationalization</h2>
+          <p
+            lang="es"
+            dir="ltr"
+            title="Spanish example"
+            translate="yes"
+            data-langnote="es"
+          >
+            Este párrafo está en español (lang="es").
+          </p>
+
+          <nav
+            id="main-nav"
+            role="navigation"
+            aria-label="Main navigation"
+            data-nav="top"
+            tabindex="0"
+          >
+            <ul>
+              <li><a href="#" accesskey="h" title="Go home">Home</a></li>
+              <li><a href="#" accesskey="c">Contact</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <section
+          class="card"
+          id="microdata"
+          role="region"
+          aria-label="microdata example"
+        >
+          <h2>Microdata (itemscope / itemprop / itemtype)</h2>
+          <article
+            itemscope
+            itemtype="http://schema.org/Person"
+            id="person1"
+            class="person"
+            data-role="soldier"
+          >
+            <h3 itemprop="name">Jane Doe</h3>
+            <p itemprop="jobTitle">Infantry</p>
+            <span
+              itemprop="memberOf"
+              itemscope
+              itemtype="http://schema.org/Organization"
+            >
+              <meta itemprop="name" content="1st Battalion" />1st Battalion
+            </span>
+          </article>
+        </section>
+
+        <section
+          class="card"
+          id="script-sample"
+          role="region"
+          aria-label="script sample"
+        >
+          <h2>Script, template and canvas</h2>
+          <template id="tpl">
+            <div class="tpl-item" data-from="template">Template content</div>
+          </template>
+
+          <canvas
+            id="c1"
+            width="200"
+            height="80"
+            tabindex="0"
+            title="Demo canvas"
+            >Your browser does not support canvas.</canvas
+          >
+
+          <script nonce="static-nonce">
+            /* inline script with nonce attribute present on script tag */
+          </script>
+        </section>
+
+        <section class="card" id="notes" role="note">
+          <h2>Notes</h2>
+          <p>
+            Most attributes shown above are <em>global</em> and may be applied
+            to any HTML element. Some attributes like <code>accesskey</code> and
+            <code>autofocus</code> are user-agent dependent. Use
+            <code>data-*</code> attributes to store custom data without
+            affecting semantics.
+          </p>
+        </section>
+
+        <footer style="opacity: 0.8; margin-top: 18px">
+          Generated example — edit freely.
+        </footer>
+      </body>
+    </html>
+    , initial-scale=1.0">
+    <title>Document</title>
+    <img src=" id="email"
+                name="email"
+                type="email"
+                tabindex="1"
+                required
+                class="input email"
+                title="contact email"
+                aria-describedby="email-help"" alt="">
+  </head>
+  <body></body>
+</html>

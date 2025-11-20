@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soldier & Equipment Registration</title>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Soldier Registration Form</h1>
+
+    <form>
+      <fieldset>
+        <legend>Soldier Information</legend>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <label for="rank">Rank</label>
+        <input type="text" id="rank" required>
+
+        <label for="idnum">Service ID Number</label>
+        <input type="text" id="idnum" required>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Equipment Details</legend>
+
+        <label for="weapon">Primary Weapon</label>
+        <input type="text" id="weapon" required>
+
+        <label for="ammo">Ammunition Amount</label>
+        <input type="number" id="ammo" required>
+
+        <label for="gear">Additional Gear</label>
+        <textarea id="gear" rows="4"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Deployment</legend>
+
+        <label for="unit">Unit/Division</label>
+        <input type="text" id="unit" required>
+
+        <label for="location">Deployment Location</label>
+        <input type="text" id="location">
+
+        <label for="status">Status</label>
+        <select id="status">
+          <option>Active Duty</option>
+          <option>Reserve</option>
+          <option>Training</option>
+        </select>
+      </fieldset>
+
+      <button type="submit">Register Soldier</button>
+    </form>
+  </div>
+</body>
+</html>
